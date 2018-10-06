@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.TargetSchedule">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/schedule"
+        android:label="@string/TargetSchedule"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="false">
+        <activity
+            android:name="targetSchedule.MainSchedule"
+            android:label="Target Schedule">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="targetSchedule.MyCalendar"
+            android:label="@string/viewCalendar"/>
+        <activity
+            android:name="targetSchedule.WeekOne"
+            android:label="@string/week1"/>
+        <activity
+            android:name="targetSchedule.WeekTwo"
+            android:label="@string/week2"/>
+        <activity
+            android:name="targetSchedule.WeekThree"
+            android:label="@string/week3"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="51e70d32b292bcde5276c496e63ae4fcc91853fb" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

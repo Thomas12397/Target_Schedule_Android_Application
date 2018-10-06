@@ -1,0 +1,479 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:clickable="true"
+    android:visibility="visible"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/gridView"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/viewLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/dateViewLayout"
+                android:showDividers="end"
+                android:divider="@drawable/divider_shape">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=""
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:onClick="onClick"
+                    android:id="@+id/dateView"
+                    android:gravity="center|top"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/weekOneGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="8"
+                android:orientation="horizontal"
+                tools:context=".GridLayoutActivity">
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="42dp"
+                    android:text=""
+                    android:id="@+id/blank"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_height="42dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/startView"
+                    android:id="@+id/start"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_height="42dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/endView"
+                    android:id="@+id/end"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_height="42dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/jobView"
+                    android:id="@+id/job"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/sunday"
+                    android:id="@+id/Sunday"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/startSun2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/endSun2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/jobSun2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="textAutoComplete"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/monday"
+                    android:id="@+id/Monday"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/startMon2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:saveEnabled="true"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true"/>
+
+                <EditText
+                    android:id="@+id/endMon2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/jobMon2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="textAutoComplete"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/tuesday"
+                    android:id="@+id/Tuesday"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/startTues2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:saveEnabled="true"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true"/>
+
+                <EditText
+                    android:id="@+id/endTues2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/jobTues2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="textAutoComplete"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/wednesday"
+                    android:id="@+id/Wednesday"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/startWed2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:saveEnabled="true"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true"/>
+
+                <EditText
+                    android:id="@+id/endWed2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/jobWed2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="textAutoComplete"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/thursday"
+                    android:id="@+id/Thursday"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/startThurs2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:saveEnabled="true"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true"/>
+
+                <EditText
+                    android:id="@+id/endThurs2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/jobThurs2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="textAutoComplete"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/friday"
+                    android:id="@+id/Friday"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/startFri2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:saveEnabled="true"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true"/>
+
+                <EditText
+                    android:id="@+id/endFri2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/jobFri2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="textAutoComplete"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/saturday"
+                    android:id="@+id/Saturday"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/startSat2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:saveEnabled="true"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/endSat2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="time"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+                <EditText
+                    android:id="@+id/jobSat2"
+                    android:layout_width="78dp"
+                    android:layout_height="32dp"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:inputType="textAutoComplete"
+                    android:background="@drawable/edit_text_style"
+                    android:clickable="true"
+                    android:enabled="true" />
+
+            </GridLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.17"
+                android:gravity="center_vertical"
+                android:showDividers="beginning"
+                android:divider="@drawable/divider_shape">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/save"
+                    android:textSize="24sp"
+                    android:textAllCaps="false"
+                    android:onClick="onClick"
+                    android:id="@+id/save2"
+                    android:gravity="center"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.17"
+                android:gravity="center_vertical"
+                android:showDividers="beginning"
+                android:divider="@drawable/divider_shape">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/shift"
+                    android:textSize="24sp"
+                    android:onClick="onClick"
+                    android:textAllCaps="false"
+                    android:id="@+id/shiftWeek2"
+                    android:gravity="center"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.17"
+                android:gravity="center_vertical"
+                android:showDividers="beginning"
+                android:divider="@drawable/divider_shape">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/clear"
+                    android:textSize="24sp"
+                    android:onClick="onClick"
+                    android:textAllCaps="false"
+                    android:id="@+id/clear2"
+                    android:gravity="center"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

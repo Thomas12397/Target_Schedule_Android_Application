@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:weightSum="1"
+    android:id="@+id/linearLayout"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.17"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="215dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/TargetSchedule"
+            android:id="@+id/textView"
+            android:layout_gravity="center_vertical"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/target"
+            android:contentDescription="@string/TargetSymbol"
+            android:id="@+id/target"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.17"
+        android:gravity="center_vertical"
+        android:showDividers="beginning|end"
+        android:divider="@drawable/divider_shape">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/week1"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="onClick"
+            android:id="@+id/weekOne"
+            android:gravity="center"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.17"
+        android:gravity="center_vertical"
+        android:showDividers="end"
+        android:divider="@drawable/divider_shape">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/week2"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="onClick"
+            android:id="@+id/weekTwo"
+            android:gravity="center"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.17"
+        android:gravity="center_vertical"
+        android:showDividers="end"
+        android:divider="@drawable/divider_shape">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/week3"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="onClick"
+            android:id="@+id/weekThree"
+            android:gravity="center"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center|center_horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/viewCalendar"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:id="@+id/viewCal"
+            android:onClick="onClick"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>
+
